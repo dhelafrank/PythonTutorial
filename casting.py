@@ -39,5 +39,5 @@ A = 4.267
 b = 'the tutorial will close in'
 c = 'minutes'
 
-v = str(b) + float(A) + str(c)
+v = b + str(A) + c
 print(v)
