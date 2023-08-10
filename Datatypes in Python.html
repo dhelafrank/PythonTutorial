@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#222">
+    <title>Data Types in Python</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+        body {
+            background: #222;
+            color: #ddd;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="title-understanding-data-types-in-python">Title: Understanding Data Types in Python</h1>
+    <p><strong>1. Introduction to Data Types</strong></p>
+    <p> The importance of data types in programming lies in their role of defining the kind of data a variable can hold
+        and the operations that can be performed on it. Data types ensure data integrity, memory allocation, and
+        compatibility between different parts of a program. They also help catch errors and enhance code efficiency by
+        allowing the compiler or interpreter to optimize memory usage and execution speed. By choosing appropriate data
+        types, programmers can create robust, efficient, and reliable software.</p>
+    <p> <em>Importance of Data Types to the computer</em></p>
+    <p>Data types help computers understand and manipulate different kinds of information by providing a structured way
+        to represent and process data. Computers operate based on binary code, which is composed of 1s and 0s. Data
+        types define how these binary values should be interpreted to represent various types of information, such as
+        numbers, characters, and more complex structures.</p>
+    <p>For example, when you declare a variable with a specific data type like &quot;int&quot; (integer), the computer
+        knows to allocate a fixed amount of memory to store whole numbers and how to perform arithmetic operations on
+        them. Similarly, when you use a &quot;string&quot; data type, the computer understands that the data represents
+        a sequence of characters rather than numerical values.</p>
+    <p>Data types also help computers ensure data validity and prevent unintended operations. If you try to perform
+        arithmetic on a string, the data type system will flag it as an error since strings are not intended for
+        mathematical operations. This prevents mistakes and helps programmers write accurate and efficient code.</p>
+    <p>In summary, data types serve as a bridge between the abstract concepts programmers work with and the binary
+        language computers understand, allowing for precise manipulation and interpretation of various types of data.
+    </p>
+    <p><strong>Real world examples</strong></p>
+    <p>Some real-life examples of how different data types are used in everyday situations:</p>
+    <ol>
+        <li>
+            <p><strong>Integers</strong>: Imagine you&#39;re shopping online and adding items to your cart. The
+                quantities of items you select are represented as integers. The computer uses integer data types to keep
+                track of the number of each item.</p>
+        </li>
+        <li>
+            <p><strong>Floating-Point Numbers</strong>: When you&#39;re calculating the price of items in your cart, you
+                might encounter fractions of a cent. Floating-point numbers are used to represent these decimal values
+                accurately.</p>
+        </li>
+        <li>
+            <p><strong>Strings</strong>: Whenever you&#39;re entering your name, address, or a message on a website,
+                that text is stored as strings. For instance, a website&#39;s login system uses strings to store
+                usernames and passwords.</p>
+        </li>
+        <li>
+            <p><strong>Boolean</strong>: Consider a light switch – it can be either &quot;on&quot; or &quot;off&quot;.
+                Boolean data types, which have values of either true or false, are used to represent such binary states.
+                They&#39;re commonly used in decision-making and control structures.</p>
+        </li>
+        <li>
+            <p><strong>Dates and Times</strong>: Online calendars and appointment scheduling systems use various data
+                types to manage dates and times. These can include integers for the day, month, and year, as well as
+                floating-point numbers to handle time zones and fractional time portions.</p>
+        </li>
+        <li>
+            <p><strong>Arrays and Lists</strong>: In a to-do list app, the list of tasks you create is stored in an
+                array or list data structure. Each item in the list can be a string or another data type, allowing you
+                to organize and manage tasks effectively.</p>
+        </li>
+        <li>
+            <p><strong>Characters</strong>: When you send a text message, each letter, number, and symbol is represented
+                by a character. These characters are encoded using specific data types, such as ASCII or Unicode,
+                allowing computers to display and interpret text correctly.</p>
+        </li>
+        <li>
+            <p><strong>Images and Multimedia</strong>: Images, videos, and audio files are complex data types that use
+                various formats to represent visual and auditory information. These formats include pixels for images
+                and samples for audio.</p>
+        </li>
+        <li>
+            <p><strong>Pointers</strong>: In programming, pointers are used to store memory addresses, enabling
+                efficient manipulation of data in computer memory. They&#39;re often used in low-level programming
+                languages or system-level operations.</p>
+        </li>
+    </ol>
+    <p>These are just a few examples of how different data types are used in everyday scenarios, demonstrating the
+        versatility and importance of data types in various applications.</p>
+    <p><strong>2. Numeric Data Types</strong></p>
+    <ul>
+        <li>
+            <p><strong>Integer Data Type:</strong></p>
+            <p> <em>Definition</em></p>
+        </li>
+    </ul>
+    <p>An integer data type is a fundamental data type in programming that is used to represent whole numbers. It
+        includes both positive and negative whole numbers, as well as zero, without any decimal or fractional parts.
+        Integers are typically stored as fixed-size binary representations in a computer&#39;s memory.</p>
+    <p>The integer data type is commonly used in scenarios where whole numbers are required, such as:</p>
+    <ol>
+        <li>
+            <p><strong>Counting</strong>: Keeping track of quantities, items, or occurrences that involve discrete
+                values. For example, the number of items in a shopping cart or the number of likes on a social media
+                post.</p>
+        </li>
+        <li>
+            <p><strong>Indexing</strong>: Accessing elements in arrays, lists, or other data structures. The position of
+                an element is often represented using integers.</p>
+        </li>
+        <li>
+            <p><strong>Loop Control</strong>: In programming loops (like for or while loops), integers are often used to
+                control the number of iterations or to iterate through a range of values.</p>
+        </li>
+        <li>
+            <p><strong>Mathematical Operations</strong>: Integers are used in arithmetic operations like addition,
+                subtraction, multiplication, and division, where the result is expected to be a whole number.</p>
+        </li>
+        <li>
+            <p><strong>Enumerations</strong>: When creating enumerated types to represent a set of distinct values,
+                integers are commonly used to associate each value with a unique integer identifier.</p>
+        </li>
+    </ol>
+    <p>In programming languages, integer data types might have different sizes (in terms of the number of bits used to
+        store them) based on the language and the underlying architecture of the computer. Common integer data types
+        include &quot;int&quot; (often 32 or 64 bits), &quot;short&quot; (usually 16 bits), and &quot;long&quot;
+        (usually 64 bits). The choice of integer data type depends on the range of values you need to represent and the
+        memory constraints of your application.</p>
+    <p> <em>Operations With Integers</em></p>
+    <p>Here are examples of basic arithmetic operations using integers in Python:</p>
+    <ol>
+        <li>
+            <p><strong>Addition (+)</strong>:</p>
+            <pre><code class="lang-python">num1 = 10
+    num2 = 5
+    result = num1 + num2
+    print(result)  <span class="hljs-comment"># Output: 15</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Subtraction (-)</strong>:</p>
+            <pre><code class="lang-python">num1 = 10
+    num2 = 5
+    result = num1 - num2
+    print(result)  <span class="hljs-comment"># Output: 5</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Multiplication (*)</strong>:</p>
+            <pre><code class="lang-python">num1 = 10
+    num2 = 5
+    result = num1 * num2
+    print(result)  <span class="hljs-comment"># Output: 50</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Division (/)</strong>:</p>
+            <pre><code class="lang-python">num1 = 10
+    num2 = 5
+    result = num1 / num2
+    print(result)  <span class="hljs-comment"># Output: 2.0 (<span class="hljs-doctag">Note:</span> In Python 3, division between integers returns a float)</span>
+    </code></pre>
+        </li>
+    </ol>
+    <p>Keep in mind that the division operation (<code>/</code>) between integers in Python 3 will return a
+        floating-point number even if the result is a whole number. If you want integer division (floor division) that
+        returns the quotient as an integer, you can use the double-slash operator (<code>//</code>):</p>
+    <pre><code class="lang-python">num1 = <span class="hljs-number">10</span>
+    num2 = <span class="hljs-number">5</span>
+    <span class="hljs-built_in">result</span> = num1<span class="hljs-comment"> // num2</span>
+    print(<span class="hljs-built_in">result</span>)  <span class="hljs-comment"># Output: 2</span>
+    </code></pre>
+    <p>These examples showcase how basic arithmetic operations can be performed using integers in Python, producing
+        results that follow the rules of mathematics.</p>
+    <p> <em>Modulus in Integers</em></p>
+    <p>Integer division and modulus are two useful operations when working with integers in Python.</p>
+    <ol>
+        <li>
+            <p><strong>Integer Division (//)</strong>:
+                Integer division returns the quotient of a division operation, discarding the fractional part. It
+                performs division and rounds down to the nearest whole number.</p>
+            <pre><code class="lang-python">num1 = 17
+    num2 = 5
+    quotient = num1 // num2
+    print(quotient)  <span class="hljs-comment"># Output: 3 (17 divided by 5 is 3 with a remainder)</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Modulus (%)</strong>:
+                The modulus operator returns the remainder of a division operation. It calculates what&#39;s left over
+                after performing division.</p>
+            <pre><code class="lang-python">num1 = 17
+    num2 = 5
+    remainder = num1 % num2
+    print(remainder)  <span class="hljs-comment"># Output: 2 (17 divided by 5 leaves a remainder of 2)</span>
+    </code></pre>
+        </li>
+    </ol>
+    <p>The combination of integer division and modulus can be used to break down a number into its quotient and
+        remainder parts. For example:</p>
+    <pre><code class="lang-python"><span class="hljs-built_in">num</span> = <span class="hljs-number">17</span>
+    divisor = <span class="hljs-number">5</span>
+    
+    <span class="hljs-built_in">quotient</span> = <span class="hljs-built_in">num</span> // divisor
+    <span class="hljs-built_in">remainder</span> = <span class="hljs-built_in">num</span> <span class="hljs-symbol">%</span> divisor
+    
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Quotient:"</span>, <span class="hljs-built_in">quotient</span>)   # Output: Quotient: <span class="hljs-number">3</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Remainder:"</span>, <span class="hljs-built_in">remainder</span>) # Output: Remainder: <span class="hljs-number">2</span>
+    </code></pre>
+    <p>In this example, 17 divided by 5 gives a quotient of 3 and a remainder of 2. These operations are particularly
+        useful for tasks like evenly distributing items, checking divisibility, or calculating time intervals.</p>
+    <ul>
+        <li>
+            <p><strong>Float Data Type:</strong></p>
+            <p>The float data type is used to represent decimal numbers in programming. Unlike integers, which only
+                represent whole numbers, floats can represent numbers with fractional parts. In programming, floats are
+                sometimes referred to as &quot;floating-point numbers&quot; because the decimal point &quot;floats&quot;
+                to represent values at different scales.</p>
+        </li>
+    </ul>
+    <p>Floats are essential for working with real-world values that are not whole numbers, such as measurements,
+        monetary amounts, and scientific calculations. They&#39;re stored in a way that includes both a sign, a
+        significant (or mantissa) part, and an exponent, allowing for a wide range of values.</p>
+    <p>Here&#39;s a simple example of using float data type in Python:</p>
+    <pre><code class="lang-python">value1 = 3.14
+    value2 = 0.25
+    result = value1 + value2
+    print(result)  <span class="hljs-comment"># Output: 3.39</span>
+    </code></pre>
+    <p>In this example, <code>value1</code> and <code>value2</code> are float variables containing decimal numbers. The
+        <code>result</code> variable stores the sum of these values, and when printed, it displays the floating-point
+        result.</p>
+    <p>While floats are powerful for representing a wide range of decimal values, it&#39;s important to note that they
+        have limitations due to the way computers store them internally. Some operations can lead to small precision
+        errors, especially when performing extensive calculations. In cases where precision is critical, specialized
+        libraries or data types may be used to mitigate such issues.</p>
+    <pre><code>  - <span class="hljs-keyword">Explain</span> <span class="hljs-keyword">precision</span> <span class="hljs-keyword">and</span> limitations <span class="hljs-keyword">of</span> <span class="hljs-built_in">float</span> numbers. (<span class="hljs-keyword">Skip</span>)
+    
+      - Discuss arithmetic <span class="hljs-keyword">operations</span> involving floats. (<span class="hljs-keyword">Skip</span>)
+    </code></pre>
+    <p><strong>3. String Data Type</strong></p>
+    <p> Strings are a fundamental data type in programming used to represent sequences of characters. A character is a
+        single element that can be a letter, digit, punctuation mark, space, or any other symbol. Strings allow
+        programmers to work with and manipulate textual data.</p>
+    <p>Here&#39;s how the concept of strings as sequences of characters works:</p>
+    <ol>
+        <li>
+            <p><strong>Sequence of Characters</strong>: A string is essentially a sequence of characters. Each character
+                in the string is associated with a specific position, called an index. The characters can be letters,
+                digits, symbols, or even special characters like newline and tab.</p>
+        </li>
+        <li>
+            <p><strong>Immutable</strong>: In many programming languages, strings are immutable, meaning once created,
+                they cannot be changed directly. If you want to modify a string, you usually create a new string with
+                the desired changes.</p>
+        </li>
+        <li>
+            <p><strong>String Literal</strong>: Strings are usually defined using double quotes (&quot;&quot;) or single
+                quotes (&#39;&#39;). For example:</p>
+            <ul>
+                <li><code>&quot;Hello, world!&quot;</code> or <code>&#39;Hello, world!&#39;</code></li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Concatenation</strong>: You can combine strings using concatenation. Concatenation joins two or
+                more strings together to create a new string.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">greeting</span> = <span class="hljs-string">"Hello"</span>
+    <span class="hljs-attr">name</span> = <span class="hljs-string">"Alice"</span>
+    <span class="hljs-attr">full_greeting</span> = greeting + <span class="hljs-string">", "</span> + name
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Indexing and Slicing</strong>: You can access individual characters within a string using their
+                indices. Indices usually start from 0. You can also use slicing to extract portions of a string.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">text</span> = <span class="hljs-string">"Python"</span>
+    <span class="hljs-attr">first_character</span> = text[<span class="hljs-number">0</span>]  # <span class="hljs-string">'P'</span>
+    <span class="hljs-attr">sub_string</span> = text[<span class="hljs-number">1</span>:<span class="hljs-number">4</span>]      # <span class="hljs-string">'yth'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Length</strong>: The length of a string is the number of characters it contains. This is commonly
+                obtained using the <code>len()</code> function.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">message</span> = <span class="hljs-string">"Hello, world!"</span>
+    <span class="hljs-attr">length</span> = len(message)  # <span class="hljs-number">13</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Escape Sequences</strong>: Strings can include special characters using escape sequences. For
+                example, <code>&quot;\n&quot;</code> represents a newline character, and <code>&quot;\t&quot;</code>
+                represents a tab character.</p>
+        </li>
+        <li>
+            <p><strong>String Methods</strong>: Programming languages provide various built-in methods for manipulating
+                strings. These methods allow you to convert cases, split strings, find substrings, replace characters,
+                and more.</p>
+        </li>
+    </ol>
+    <p>Strings are essential for dealing with textual information in programming, whether it&#39;s user input, file
+        content, or any form of communication within a program. Understanding how strings are treated as sequences of
+        characters helps programmers effectively manage and manipulate textual data.</p>
+    <p> Certainly! Let&#39;s dive deeper into string indexing, slicing, and concatenation:</p>
+    <ol>
+        <li>
+            <p><strong>String Indexing</strong>:
+                String indexing allows you to access individual characters within a string using their position, or
+                index. In many programming languages, indices start from 0 for the first character and increase
+                incrementally.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">message</span> = <span class="hljs-string">"Hello, world!"</span>
+    <span class="hljs-attr">first_character</span> = message[<span class="hljs-number">0</span>]   # <span class="hljs-string">'H'</span>
+    <span class="hljs-attr">second_character</span> = message[<span class="hljs-number">1</span>]  # <span class="hljs-string">'e'</span>
+    </code></pre>
+            <p>You can also use negative indices to count from the end of the string:</p>
+            <pre><code class="lang-python"><span class="hljs-attr">last_character</span> = message[-<span class="hljs-number">1</span>]    # <span class="hljs-string">'!'</span>
+    <span class="hljs-attr">second_last_character</span> = message[-<span class="hljs-number">2</span>]  # <span class="hljs-string">'d'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>String Slicing</strong>:
+                String slicing allows you to extract a portion of a string by specifying a range of indices. The format
+                is <code>string[start:end]</code>, where <code>start</code> is inclusive and <code>end</code> is
+                exclusive.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">message</span> = <span class="hljs-string">"Hello, world!"</span>
+    <span class="hljs-attr">hello</span> = message[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>]   # <span class="hljs-string">'Hello'</span>
+    <span class="hljs-attr">world</span> = message[<span class="hljs-number">7</span>:<span class="hljs-number">12</span>]  # <span class="hljs-string">'world'</span>
+    </code></pre>
+            <p>If you omit the <code>start</code> index, it defaults to 0. If you omit the <code>end</code> index, it
+                defaults to the end of the string.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">greeting</span> = message[:<span class="hljs-number">5</span>]   # <span class="hljs-string">'Hello'</span>
+    <span class="hljs-attr">exclam</span> = message[<span class="hljs-number">13</span>:]    # <span class="hljs-string">'!'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>String Concatenation</strong>:
+                String concatenation involves combining two or more strings into a single string. This is done using the
+                <code>+</code> operator.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">first_name</span> = <span class="hljs-string">"John"</span>
+    <span class="hljs-attr">last_name</span> = <span class="hljs-string">"Doe"</span>
+    <span class="hljs-attr">full_name</span> = first_name + <span class="hljs-string">" "</span> + last_name  # <span class="hljs-string">'John Doe'</span>
+    </code></pre>
+            <p>Strings can also be concatenated with other data types, but you might need to convert non-string data to
+                strings first.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">age</span> = <span class="hljs-number">30</span>
+    <span class="hljs-attr">info</span> = <span class="hljs-string">"Name: "</span> + full_name + <span class="hljs-string">", Age: "</span> + str(age)  # <span class="hljs-string">'Name: John Doe, Age: 30'</span>
+    </code></pre>
+        </li>
+    </ol>
+    <p>These concepts are fundamental for working with strings in programming. By using indexing, slicing, and
+        concatenation effectively, you can manipulate and extract relevant information from strings, making them a
+        versatile tool for text processing and manipulation tasks.</p>
+    <ul>
+        <li>Common string methods (<code>.lower()</code>, <code>.upper()</code>, <code>.split()</code>,
+            <code>.strip()</code>, etc.).</li>
+    </ul>
+    <p> Some common string methods that are widely used for string manipulation:</p>
+    <ol>
+        <li>
+            <p><strong><code>.lower()</code> and <code>.upper()</code></strong>:</p>
+            <ul>
+                <li><code>.lower()</code>: Converts all characters in a string to lowercase.</li>
+                <li><code>.upper()</code>: Converts all characters in a string to uppercase.</li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-attr">text</span> = <span class="hljs-string">"Hello, World!"</span>
+    <span class="hljs-attr">lower_text</span> = text.lower()  # <span class="hljs-string">'hello, world!'</span>
+    <span class="hljs-attr">upper_text</span> = text.upper()  # <span class="hljs-string">'HELLO, WORLD!'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong><code>.split()</code></strong>:</p>
+            <ul>
+                <li><code>.split()</code>: Splits a string into a list of substrings based on a delimiter. The default
+                    delimiter is space.</li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-attr">sentence</span> = <span class="hljs-string">"This is a sample sentence."</span>
+    <span class="hljs-attr">words</span> = sentence.split()  # [<span class="hljs-string">'This'</span>, <span class="hljs-string">'is'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'sample'</span>, <span class="hljs-string">'sentence.'</span>]
+    </code></pre>
+        </li>
+        <li>
+            <p><strong><code>.strip()</code> and <code>.rstrip()</code></strong>:</p>
+            <ul>
+                <li><code>.strip()</code>: Removes leading and trailing whitespace characters (spaces, tabs, newlines).
+                </li>
+                <li><code>.rstrip()</code>: Removes only trailing whitespace.</li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-attr">input_text</span> = <span class="hljs-string">"   Hello, World!   "</span>
+    <span class="hljs-attr">clean_text</span> = input_text.strip()  # <span class="hljs-string">'Hello, World!'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong><code>.replace()</code></strong>:</p>
+            <ul>
+                <li><code>.replace(old, new)</code>: Replaces occurrences of a substring with another substring.</li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-keyword">text</span> = <span class="hljs-string">"I like apples and apples are tasty."</span>
+    new_text = <span class="hljs-keyword">text</span>.<span class="hljs-built_in">replace</span>(<span class="hljs-string">"apples"</span>, <span class="hljs-string">"oranges"</span>)  <span class="hljs-comment"># 'I like oranges and oranges are tasty.'</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong><code>.find()</code> and <code>.index()</code></strong>:</p>
+            <ul>
+                <li><code>.find(substring)</code>: Finds the index of the first occurrence of a substring. Returns -1 if
+                    not found.</li>
+                <li><code>.index(substring)</code>: Similar to <code>.find()</code>, but raises an error if not found.
+                </li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-keyword">message</span> = <span class="hljs-string">"Hello, World!"</span>
+    index1 = <span class="hljs-keyword">message</span>.find(<span class="hljs-string">"World"</span>)  <span class="hljs-comment"># 7</span>
+    index2 = <span class="hljs-keyword">message</span>.index(<span class="hljs-string">"Earth"</span>)  <span class="hljs-comment"># Raises a ValueError since "Earth" is not in the string</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong><code>.startswith()</code> and <code>.endswith()</code></strong>:</p>
+            <ul>
+                <li><code>.startswith(prefix)</code>: Checks if a string starts with a specified prefix.</li>
+                <li><code>.endswith(suffix)</code>: Checks if a string ends with a specified suffix.</li>
+            </ul>
+            <pre><code class="lang-python"><span class="hljs-attr">filename</span> = <span class="hljs-string">"document.txt"</span>
+    <span class="hljs-attr">starts_with</span> = filename.startswith(<span class="hljs-string">"doc"</span>)  # <span class="hljs-literal">True</span>
+    <span class="hljs-attr">ends_with</span> = filename.endswith(<span class="hljs-string">".pdf"</span>)  # <span class="hljs-literal">False</span>
+    </code></pre>
+        </li>
+    </ol>
+    <p>These are just a few examples of the many string methods available in programming languages. By using these
+        methods, you can efficiently perform various operations on strings, such as modifying their case, splitting them
+        into parts, removing unwanted characters, and more.</p>
+    <ul>
+        <li>Examples of string formatting using f-strings or <code>.format()</code>.</li>
+    </ul>
+    <p>String formatting allows you to combine variables, values, and text to create formatted strings. There are two
+        common methods for string formatting in Python: f-strings and the .format() method. Here are examples of both:
+    </p>
+    <p><strong>Using f-strings (Python 3.6 and later)</strong>:
+        F-strings allow you to embed expressions inside string literals by prefixing the string with an &#39;f&#39; or
+        &#39;F&#39;. You can then include variables or expressions enclosed in curly braces <code>{}</code> within the
+        string.</p>
+    <pre><code class="lang-python"><span class="hljs-attr">name</span> = <span class="hljs-string">"Alice"</span>
+    <span class="hljs-attr">age</span> = <span class="hljs-number">30</span>
+    <span class="hljs-attr">height</span> = <span class="hljs-number">5.7</span>
+    
+    <span class="hljs-attr">formatted_string</span> = f<span class="hljs-string">"My name is {name}, I'm {age} years old, and I'm {height} feet tall."</span>
+    print(formatted_string)
+    </code></pre>
+    <p>Output:</p>
+    <pre><code class="lang-python">My name <span class="hljs-keyword">is</span> Alice, I<span class="hljs-symbol">'m</span> <span class="hljs-number">30</span> years old, <span class="hljs-keyword">and</span> I<span class="hljs-symbol">'m</span> <span class="hljs-number">5.70</span> feet tall.
+    </code></pre>
+    <p><strong>Using <code>.format()</code> method</strong>:
+        The <code>.format()</code> method allows you to insert values into placeholders in a string using curly braces
+        <code>{}</code>. You can specify the order of values or use named placeholders.</p>
+    <pre><code class="lang-python"><span class="hljs-built_in">name</span> = <span class="hljs-string">"Bob"</span>
+    <span class="hljs-built_in">score</span> = <span class="hljs-number">85</span>
+    
+    formatted_string = <span class="hljs-string">"Player: {}, Score: {}"</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">name</span>, <span class="hljs-built_in">score</span>)
+    print(formatted_string)
+    </code></pre>
+    <p>Output:</p>
+    <pre><code class="lang-python"><span class="hljs-string">Player:</span> Bob, <span class="hljs-string">Score:</span> <span class="hljs-number">85</span>
+    </code></pre>
+    <p>You can also use indexing or named placeholders:</p>
+    <pre><code class="lang-python">formatted_string = <span class="hljs-string">"Player: {0}, Score: {1}"</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">name</span>, <span class="hljs-built_in">score</span>)
+    print(formatted_string)
+    </code></pre>
+    <p>Output:</p>
+    <pre><code class="lang-python"><span class="hljs-string">Player:</span> Bob, <span class="hljs-string">Score:</span> <span class="hljs-number">85</span>
+    </code></pre>
+    <pre><code class="lang-python">formatted_string = <span class="hljs-string">"Player: {player}, Score: {score}"</span>.<span class="hljs-built_in">format</span>(<span class="hljs-built_in">player</span>=<span class="hljs-built_in">name</span>, <span class="hljs-built_in">score</span>=<span class="hljs-built_in">score</span>)
+    print(formatted_string)
+    </code></pre>
+    <p>Output:</p>
+    <pre><code class="lang-python"><span class="hljs-string">Player:</span> Bob, <span class="hljs-string">Score:</span> <span class="hljs-number">85</span>
+    </code></pre>
+    <p><strong>4. Boolean Data Type</strong></p>
+    <p>The Boolean data type is a fundamental data type in programming that represents two distinct values:
+        <code>True</code> and <code>False</code>. Boolean values are used to express the truth or falsehood of
+        statements, conditions, or comparisons within a program&#39;s logic.</p>
+    <p>Here&#39;s a brief explanation of each value:</p>
+    <ul>
+        <li><strong><code>True</code></strong>: Represents a condition or statement that is considered true or valid.
+        </li>
+        <li><strong><code>False</code></strong>: Represents a condition or statement that is considered false or
+            invalid.</li>
+    </ul>
+    <p>Boolean values are essential for decision-making and control flow in programming. They allow you to write code
+        that performs different actions based on whether certain conditions are true or false. For instance, you might
+        use Boolean values to control whether a loop continues running, to determine if a user has successfully logged
+        in, or to check if a certain criteria is met before executing a certain block of code.</p>
+    <p>Boolean values can be used in combination with comparison and logical operators to create complex conditions and
+        expressions that drive the behavior of your programs.</p>
+    <ul>
+        <li>Comparison operators (==, !=, &gt;, &lt;, &gt;=, &lt;=) and their use.</li>
+    </ul>
+    <p>Comparison operators are used to compare two values and determine the relationship between them. They return
+        Boolean values (<code>True</code> or <code>False</code>) based on whether the comparison is true or false. Here
+        are the commonly used comparison operators:</p>
+    <ol>
+        <li>
+            <p><strong>Equal to (<code>==</code>)</strong>:
+                Checks if two values are equal.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">5</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">5</span>
+    <span class="hljs-attr">result</span> = x == y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Not equal to (<code>!=</code>)</strong>:
+                Checks if two values are not equal.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">10</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">20</span>
+    <span class="hljs-attr">result</span> = x != y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Greater than (<code>&gt;</code>)</strong>:
+                Checks if the value on the left is greater than the value on the right.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">15</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">10</span>
+    <span class="hljs-attr">result</span> = x &gt; y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Less than (<code>&lt;</code>)</strong>:
+                Checks if the value on the left is less than the value on the right.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">5</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">8</span>
+    <span class="hljs-attr">result</span> = x &lt; y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Greater than or equal to (<code>&gt;=</code>)</strong>:
+                Checks if the value on the left is greater than or equal to the value on the right.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">20</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">20</span>
+    <span class="hljs-attr">result</span> = x &gt;= y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+        <li>
+            <p><strong>Less than or equal to (<code>&lt;=</code>)</strong>:
+                Checks if the value on the left is less than or equal to the value on the right.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">15</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">20</span>
+    <span class="hljs-attr">result</span> = x &lt;= y  # <span class="hljs-literal">True</span>
+    </code></pre>
+        </li>
+    </ol>
+    <p>Comparison operators are used extensively in programming to create conditions, make decisions, and control the
+        flow of code. They&#39;re commonly used in <code>if</code> statements, loops, and various other control
+        structures to determine whether certain actions should be taken based on the relationship between two values.
+    </p>
+    <ul>
+        <li>Logical operators (and, or, not) and their applications in conditions.</li>
+    </ul>
+    <p>Logical operators are used to combine or manipulate Boolean values in conditions to create more complex
+        expressions. They allow you to build conditions that involve multiple comparisons and determine the overall
+        truth value of those comparisons. Here are the three main logical operators: <code>and</code>, <code>or</code>,
+        and <code>not</code>.</p>
+    <ol>
+        <li>
+            <p><strong><code>and</code> Operator</strong>:
+                The <code>and</code> operator returns <code>True</code> if both operands are <code>True</code>, and
+                <code>False</code> otherwise.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">10</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">20</span>
+    <span class="hljs-attr">result</span> = x &gt; <span class="hljs-number">5</span> and y &lt; <span class="hljs-number">30</span>  # <span class="hljs-literal">True</span> (both conditions are <span class="hljs-literal">true</span>)
+    </code></pre>
+            <p>The <code>and</code> operator is often used when you want to make sure multiple conditions are satisfied
+                before taking an action.</p>
+        </li>
+        <li>
+            <p><strong><code>or</code> Operator</strong>:
+                The <code>or</code> operator returns <code>True</code> if at least one of the operands is
+                <code>True</code>, and <code>False</code> if both operands are <code>False</code>.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">10</span>
+    <span class="hljs-attr">y</span> = <span class="hljs-number">5</span>
+    <span class="hljs-attr">result</span> = x &gt; <span class="hljs-number">15</span> or y &gt; <span class="hljs-number">3</span>  # <span class="hljs-literal">True</span> (at least <span class="hljs-literal">on</span>e condition is <span class="hljs-literal">true</span>)
+    </code></pre>
+            <p>The <code>or</code> operator is useful when you want to take an action if any of multiple conditions is
+                met.</p>
+        </li>
+        <li>
+            <p><strong><code>not</code> Operator</strong>:
+                The <code>not</code> operator returns the opposite of the Boolean value of its operand. If the operand
+                is <code>True</code>, <code>not</code> returns <code>False</code>, and vice versa.</p>
+            <pre><code class="lang-python"><span class="hljs-attr">x</span> = <span class="hljs-number">5</span>
+    <span class="hljs-attr">result</span> = not x &gt; <span class="hljs-number">10</span>  # <span class="hljs-literal">True</span> (<span class="hljs-number">5</span> is not greater than <span class="hljs-number">10</span>)
+    </code></pre>
+            <p>The <code>not</code> operator is often used to negate a condition or invert the truth value of a Boolean
+                expression.</p>
+        </li>
+    </ol>
+    <p>Logical operators are widely used in conditions to create more sophisticated decision-making logic. They allow
+        you to combine multiple conditions and control the flow of your code based on various combinations of truth
+        values. For example, you might use <code>and</code> to ensure that multiple conditions are met before taking
+        action, use <code>or</code> to provide alternatives, and use <code>not</code> to invert the result of a
+        condition.</p>
+    <p><strong>5. Lists and Tuples</strong></p>
+    <ul>
+        <li>
+            <p><strong>Lists:</strong></p>
+            <p> Lists are a specific data structure in programming that differ from other data types like integers,
+                strings, floats, and Booleans. Here&#39;s how lists differentiate from other data types:</p>
+        </li>
+    </ul>
+    <ol>
+        <li>
+            <p><strong>Collection of Items</strong>:</p>
+            <ul>
+                <li>Lists: A list is an ordered collection of items, where each item can be of any data type, including
+                    other lists. Lists allow you to store and organize multiple values in a single variable.</li>
+                <li>Other Data Types: Other data types represent individual values. For example, integers represent
+                    whole numbers, strings represent text, floats represent decimal numbers, and Booleans represent
+                    true/false values.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Mutable</strong>:</p>
+            <ul>
+                <li>Lists: Lists are mutable, meaning you can change, add, or remove elements after the list is created.
+                    You can modify items within the list without needing to create a new list.</li>
+                <li>Other Data Types: Most other data types, like integers, strings, floats, and Booleans, are
+                    immutable, meaning their values cannot be changed once they are created. You create new instances to
+                    represent different values.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Ordered</strong>:</p>
+            <ul>
+                <li>Lists: Lists maintain the order of elements, which means the position of each item in the list
+                    matters.</li>
+                <li>Other Data Types: Some data types, like dictionaries and sets, may not necessarily maintain a
+                    specific order.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Use of Square Brackets</strong>:</p>
+            <ul>
+                <li>Lists: Lists are defined using square brackets <code>[]</code>. Elements are separated by commas.
+                </li>
+                <li>Other Data Types: Other data types have their own syntax for definition. For example, integers,
+                    floats, and Booleans are simple values, while strings are defined using single or double quotes.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Iteration and Indexing</strong>:</p>
+            <ul>
+                <li>Lists: Lists can be iterated over using loops and accessed using indexing. You can access specific
+                    elements by their position (index) in the list.</li>
+                <li>Other Data Types: While other data types might be iterable (strings, for example), they are not
+                    typically accessed using indexes in the same way lists are.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Flexible Size</strong>:</p>
+            <ul>
+                <li>Lists: Lists can grow or shrink in size as you add or remove elements.</li>
+                <li>Other Data Types: Most other data types have a fixed size once they&#39;re created.</li>
+            </ul>
+        </li>
+    </ol>
+    <p>Overall, lists are versatile data structures that allow you to work with collections of items in a flexible and
+        dynamic way. They are commonly used for storing related data, managing collections, and implementing various
+        algorithms and data manipulation tasks.</p>
+    <pre><code>  - How to <span class="hljs-keyword">create</span>, <span class="hljs-keyword">access</span>, <span class="hljs-keyword">and</span> <span class="hljs-keyword">modify</span> <span class="hljs-keyword">list</span> elements.
+    </code></pre>
+    <p><strong>Creating a List</strong>:</p>
+    <p>You can create a list by enclosing items in square brackets <code>[]</code>, separated by commas.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"grape"</span>]
+    print(fruits)  # <span class="hljs-symbol">Output</span>: [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'grape'</span>]
+    </code></pre>
+    <p><strong>Accessing List Elements</strong>:</p>
+    <p>You can access list elements using their indices.</p>
+    <pre><code class="lang-python"><span class="hljs-attr">fruits</span> = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"grape"</span>]
+    
+    <span class="hljs-attr">first_fruit</span> = fruits[<span class="hljs-number">0</span>]
+    print(first_fruit)  <span class="hljs-comment"># Output: apple</span>
+    
+    <span class="hljs-attr">second_fruit</span> = fruits[<span class="hljs-number">1</span>]
+    print(second_fruit)  <span class="hljs-comment"># Output: banana</span>
+    
+    <span class="hljs-attr">third_fruit</span> = fruits[<span class="hljs-number">2</span>]
+    print(third_fruit)  <span class="hljs-comment"># Output: orange</span>
+    </code></pre>
+    <p>You can also use negative indices to count from the end of the list:</p>
+    <pre><code class="lang-python">last_fruit = fruits[-1]
+    <span class="hljs-built_in">print</span>(last_fruit)  <span class="hljs-comment"># Output: grape</span>
+    
+    second_last_fruit = fruits[-2]
+    <span class="hljs-built_in">print</span>(second_last_fruit)  <span class="hljs-comment"># Output: orange</span>
+    </code></pre>
+    <p><strong>Modifying List Elements</strong>:</p>
+    <p>Lists are mutable, so you can change their elements after creation.</p>
+    <ul>
+        <li>Assign a new value to a specific index to modify an element:</li>
+    </ul>
+    <pre><code class="lang-python">fruits[<span class="hljs-number">1</span>] = <span class="hljs-string">"cherry"</span>
+    print(fruits)  # <span class="hljs-symbol">Output</span>: [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'cherry'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'grape'</span>]
+    </code></pre>
+    <ul>
+        <li>Use slicing to modify multiple elements at once:</li>
+    </ul>
+    <pre><code class="lang-python">fruits[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>] = [<span class="hljs-string">"cherry"</span>, <span class="hljs-string">"pear"</span>]
+    print(fruits)  # <span class="hljs-symbol">Output</span>: [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'cherry'</span>, <span class="hljs-string">'pear'</span>, <span class="hljs-string">'grape'</span>]
+    </code></pre>
+    <ul>
+        <li>Use methods like <code>.append()</code>, <code>.insert()</code>, or <code>.extend()</code> to add new
+            elements:</li>
+    </ul>
+    <pre><code class="lang-python">fruits.<span class="hljs-keyword">append</span>(<span class="hljs-string">"kiwi"</span>)
+    fruits.<span class="hljs-keyword">insert</span>(<span class="hljs-number">2</span>, <span class="hljs-string">"melon"</span>)
+    more_fruits = [<span class="hljs-string">"peach"</span>, <span class="hljs-string">"plum"</span>]
+    fruits.<span class="hljs-built_in">extend</span>(more_fruits)
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'cherry'</span>, <span class="hljs-string">'melon'</span>, <span class="hljs-string">'pear'</span>, <span class="hljs-string">'grape'</span>, <span class="hljs-string">'kiwi'</span>, <span class="hljs-string">'peach'</span>, <span class="hljs-string">'plum'</span>]
+    </code></pre>
+    <ul>
+        <li>Use the <code>del</code> statement to remove elements by index:</li>
+    </ul>
+    <pre><code class="lang-python">del fruits[<span class="hljs-number">1</span>]
+    print(fruits)  # <span class="hljs-symbol">Output</span>: [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'melon'</span>, <span class="hljs-string">'pear'</span>, <span class="hljs-string">'grape'</span>, <span class="hljs-string">'kiwi'</span>, <span class="hljs-string">'peach'</span>, <span class="hljs-string">'plum'</span>]
+    </code></pre>
+    <ul>
+        <li>Use the <code>.remove()</code> method to remove elements by value:</li>
+    </ul>
+    <pre><code class="lang-python">fruits.<span class="hljs-built_in">remove</span>(<span class="hljs-string">"orange"</span>)
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'melon'</span>, <span class="hljs-string">'pear'</span>, <span class="hljs-string">'grape'</span>, <span class="hljs-string">'kiwi'</span>, <span class="hljs-string">'peach'</span>, <span class="hljs-string">'plum'</span>]
+    </code></pre>
+    <p>These examples demonstrate how to work with lists in terms of creating, accessing, and modifying their elements.
+    </p>
+    <pre><code>  - List methods (`.append()`, `.insert()`, `.remove()`, `.sort()`, etc.).
+    </code></pre>
+    <p>Certainly! Here are the examples of list methods </p>
+    <p><strong><code>.append()</code></strong>:
+        Adds an element to the end of the list.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    fruits.<span class="hljs-keyword">append</span>(<span class="hljs-string">"kiwi"</span>)
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'kiwi'</span>]
+    </code></pre>
+    <p><strong><code>.insert()</code></strong>:
+        Inserts an element at a specific index in the list.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    fruits.<span class="hljs-keyword">insert</span>(<span class="hljs-number">1</span>, <span class="hljs-string">"cherry"</span>)
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'cherry'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'orange'</span>]
+    </code></pre>
+    <p><strong><code>.remove()</code></strong>:
+        Removes the first occurrence of a specified element from the list.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    fruits.<span class="hljs-built_in">remove</span>(<span class="hljs-string">"banana"</span>)
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'orange'</span>]
+    </code></pre>
+    <p><strong><code>.sort()</code></strong>:
+        Sorts the list in ascending order. It modifies the original list and returns <code>None</code>.</p>
+    <pre><code class="lang-python">numbers = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>]
+    numbers.<span class="hljs-keyword">sort</span>()
+    <span class="hljs-keyword">print</span>(numbers)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]
+    </code></pre>
+    <p><strong><code>.reverse()</code></strong>:
+        Reverses the order of elements in the list.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    fruits.<span class="hljs-built_in">reverse</span>()
+    <span class="hljs-keyword">print</span>(fruits)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'orange'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'apple'</span>]
+    </code></pre>
+    <p><strong><code>.extend()</code></strong>:
+        Extends the list by appending elements from another iterable (list, tuple, etc.).</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>]
+    more_fruits = [<span class="hljs-string">"orange"</span>, <span class="hljs-string">"kiwi"</span>]
+    fruits.extend(more_fruits)
+    print(fruits)  # <span class="hljs-symbol">Output</span>: [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'banana'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'kiwi'</span>]
+    </code></pre>
+    <p><strong><code>.pop()</code></strong>:
+        Removes and returns the element at a specified index. If no index is provided, it removes the last element.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    removed_fruit = fruits.<span class="hljs-keyword">pop</span>(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">print</span>(removed_fruit)  # Outpu<span class="hljs-variable">t:</span> <span class="hljs-string">'banana'</span>
+    <span class="hljs-keyword">print</span>(fruits)         # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'apple'</span>, <span class="hljs-string">'orange'</span>]
+    </code></pre>
+    <p><strong><code>.index()</code></strong>:
+        Returns the index of the first occurrence of a specified element.</p>
+    <pre><code class="lang-python">fruits = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    <span class="hljs-built_in">index</span> = fruits.<span class="hljs-built_in">index</span>(<span class="hljs-string">"banana"</span>)
+    <span class="hljs-keyword">print</span>(<span class="hljs-built_in">index</span>)  # Outpu<span class="hljs-variable">t:</span> <span class="hljs-number">1</span>
+    </code></pre>
+    <p>These examples demonstrate the use of various list methods along with their expected outputs.</p>
+    <ul>
+        <li>
+            <p><strong>6. Tuples:</strong></p>
+            <ul>
+                <li>Immutability of tuples and use cases.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Tuples are similar to lists in Python, but they have a key difference: tuples are immutable, while lists are
+        mutable. This means that once you create a tuple, you cannot modify its elements. Here&#39;s a closer look at
+        the immutability of tuples and their use cases:</p>
+    <p><strong>Immutability of Tuples</strong>:</p>
+    <ol>
+        <li>
+            <p><strong>Cannot Modify Elements</strong>: Once a tuple is created, you cannot change, add, or remove
+                elements. This property makes tuples immutable data structures.</p>
+        </li>
+        <li>
+            <p><strong>Preservation of Data</strong>: Because tuples are immutable, the data they hold remains constant
+                throughout their lifetime. This can be useful when you want to ensure that the data doesn&#39;t
+                accidentally get modified.</p>
+        </li>
+    </ol>
+    <p><strong>Use Cases for Tuples</strong>:</p>
+    <ol>
+        <li>
+            <p><strong>Data Integrity</strong>: Tuples are often used to store related pieces of data that belong
+                together and shouldn&#39;t change. For example, you might use a tuple to store coordinates (x, y) or
+                dates (year, month, day).</p>
+        </li>
+        <li>
+            <p><strong>Dictionary Keys</strong>: Tuples can be used as keys in dictionaries because of their
+                immutability. Lists, being mutable, cannot be used as dictionary keys.</p>
+        </li>
+        <li>
+            <p><strong>Function Return Values</strong>: Functions can return multiple values using a tuple. Since tuples
+                are immutable, they ensure the integrity of the returned data.</p>
+        </li>
+        <li>
+            <p><strong>Unpacking</strong>: Tuples are often used to unpack multiple values returned by functions or when
+                iterating over sequences.</p>
+        </li>
+        <li>
+            <p><strong>Hashable for Sets</strong>: Tuples are hashable, making them suitable for use as elements in
+                sets. Lists, being mutable, are not hashable and cannot be elements in sets.</p>
+        </li>
+        <li>
+            <p><strong>Database Records</strong>: Tuples are used to represent individual records in databases, where
+                each field value is immutable.</p>
+        </li>
+    </ol>
+    <p>Example use case:</p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Using a tuple to represent a point's coordinates</span>
+    point = (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)  <span class="hljs-comment"># Immutable tuple</span>
+    x, y = point    <span class="hljs-comment"># Unpacking the tuple</span>
+    
+    <span class="hljs-comment"># Using a tuple to return multiple values from a function</span>
+    def <span class="hljs-built_in">divide</span>(x, y):
+        quotient = x<span class="hljs-comment"> // y</span>
+        remainder = x % y
+        <span class="hljs-literal">return</span> quotient, remainder
+    
+    <span class="hljs-built_in">result</span> = <span class="hljs-built_in">divide</span>(<span class="hljs-number">17</span>, <span class="hljs-number">5</span>)
+    quotient, remainder = <span class="hljs-built_in">result</span>
+    </code></pre>
+    <p>In summary, tuples are immutable data structures that provide data integrity and are suitable for cases where you
+        want to store related data that should not change. Lists are better suited for scenarios where you need to
+        modify, add, or remove elements.</p>
+    <pre><code>  - How <span class="hljs-keyword">to</span> <span class="hljs-keyword">create</span> <span class="hljs-keyword">and</span> access <span class="hljs-keyword">tuple</span> elements.:
+    </code></pre>
+    <p><strong>Creating a Tuple</strong>:
+        You can create a tuple by enclosing items in parentheses <code>()</code>, separated by commas.</p>
+    <pre><code class="lang-python"><span class="hljs-attr">fruits</span> = (<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"grape"</span>)
+    </code></pre>
+    <p><strong>Accessing Tuple Elements</strong>:
+        You can access tuple elements using their indices. Indices start from 0 for the first element and increase
+        incrementally.</p>
+    <pre><code class="lang-python"><span class="hljs-attr">fruits</span> = (<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>, <span class="hljs-string">"grape"</span>)
+    
+    <span class="hljs-attr">first_fruit</span> = fruits[<span class="hljs-number">0</span>]
+    print(first_fruit)  <span class="hljs-comment"># Output: apple</span>
+    
+    <span class="hljs-attr">second_fruit</span> = fruits[<span class="hljs-number">1</span>]
+    print(second_fruit)  <span class="hljs-comment"># Output: banana</span>
+    
+    <span class="hljs-attr">third_fruit</span> = fruits[<span class="hljs-number">2</span>]
+    print(third_fruit)  <span class="hljs-comment"># Output: orange</span>
+    </code></pre>
+    <p>You can also use negative indices to count from the end of the tuple:</p>
+    <pre><code class="lang-python">last_fruit = fruits[-1]
+    <span class="hljs-built_in">print</span>(last_fruit)  <span class="hljs-comment"># Output: grape</span>
+    
+    second_last_fruit = fruits[-2]
+    <span class="hljs-built_in">print</span>(second_last_fruit)  <span class="hljs-comment"># Output: orange</span>
+    </code></pre>
+    <p>Tuple elements are accessed in the same way as list elements, but remember that tuples are immutable, so you
+        cannot modify their elements after creation.</p>
+    <p><strong>6. Dictionaries</strong></p>
+    <p> Dictionaries in Python are a versatile and powerful data structure used to store and manage collections of data
+        in the form of key-value pairs. Each element in a dictionary is made up of two main components: a key and its
+        associated value. The key acts as a label or identifier, while the value holds the actual data associated with
+        that key. This relationship allows for efficient and fast retrieval of data based on its unique key.</p>
+    <p>Here&#39;s a breakdown of how dictionaries work:</p>
+    <ul>
+        <li>
+            <p><strong>Keys</strong>: Keys are unique and immutable (cannot be changed after creation) identifiers that
+                serve as the labels for the associated values. They are typically strings, numbers, or tuples.</p>
+        </li>
+        <li>
+            <p><strong>Values</strong>: Values can be of any data type: strings, numbers, lists, other dictionaries, or
+                even more complex objects.</p>
+        </li>
+        <li>
+            <p><strong>Key-Value Pairs</strong>: In a dictionary, each key is associated with a specific value.
+                Together, they form a key-value pair.</p>
+        </li>
+        <li>
+            <p><strong>Unordered</strong>: Dictionaries are unordered collections, meaning that the elements are not
+                stored in a specific order. However, starting from Python 3.7, dictionaries maintain the insertion order
+                of their elements.</p>
+        </li>
+    </ul>
+    <p>Here&#39;s an example of a dictionary:</p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Creating a dictionary of person's information</span>
+    <span class="hljs-attr">person</span> = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: <span class="hljs-number">30</span>,
+        <span class="hljs-string">"city"</span>: <span class="hljs-string">"New York"</span>
+    }
+    </code></pre>
+    <p>In this example, <code>&quot;name&quot;</code>, <code>&quot;age&quot;</code>, and <code>&quot;city&quot;</code>
+        are keys, and <code>&quot;Alice&quot;</code>, <code>30</code>, and <code>&quot;New York&quot;</code> are their
+        corresponding values.</p>
+    <p>Dictionaries are useful for various scenarios:</p>
+    <ol>
+        <li>
+            <p><strong>Fast Data Retrieval</strong>: Dictionaries provide fast lookups based on keys. You can quickly
+                access the value associated with a specific key without needing to iterate through the entire
+                collection.</p>
+        </li>
+        <li>
+            <p><strong>Mapping Relationships</strong>: Dictionaries are often used to map one value to another. For
+                example, you could use a dictionary to map words to their meanings or to store configurations.</p>
+        </li>
+        <li>
+            <p><strong>Storing Structured Data</strong>: Dictionaries allow you to store structured data without
+                requiring fixed positions or indices. This is useful when the data doesn&#39;t naturally fit into a
+                linear sequence.</p>
+        </li>
+        <li>
+            <p><strong>Managing Counters</strong>: Dictionaries can be used to maintain counters and frequency
+                distributions. Keys represent elements, and values represent their occurrence frequencies.</p>
+        </li>
+    </ol>
+    <pre><code class="lang-python"><span class="hljs-attr">word_counts</span> = {
+        <span class="hljs-string">"apple"</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-string">"banana"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"orange"</span>: <span class="hljs-number">7</span>
+    }
+    </code></pre>
+    <p>Overall, dictionaries provide a flexible and efficient way to organize and manipulate data based on key-value
+        relationships.</p>
+    <ul>
+        <li>Dictionary methods (<code>.keys()</code>, <code>.values()</code>, <code>.items()</code>) and how to
+            manipulate dictionaries.</li>
+    </ul>
+    <p>Certainly! Here are some common dictionary methods in Python, along with explanations of their usage and how to
+        manipulate dictionaries:</p>
+    <p><strong><code>.keys()</code> Method</strong>:</p>
+    <ul>
+        <li>Returns a view of all the keys in the dictionary.</li>
+        <li>The result is a &quot;view object&quot; that can be converted to other data types, like a list or set.</li>
+    </ul>
+    <pre><code class="lang-python">person = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: <span class="hljs-number">30</span>,
+        <span class="hljs-string">"city"</span>: <span class="hljs-string">"New York"</span>
+    }
+    
+    <span class="hljs-built_in">keys</span> = person.<span class="hljs-built_in">keys</span>()
+    <span class="hljs-keyword">print</span>(<span class="hljs-built_in">keys</span>)  # Outpu<span class="hljs-variable">t:</span> dict_keys([<span class="hljs-string">'name'</span>, <span class="hljs-string">'age'</span>, <span class="hljs-string">'city'</span>])
+    
+    # Convert the <span class="hljs-keyword">view</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">a</span> <span class="hljs-keyword">list</span>
+    key_list = <span class="hljs-keyword">list</span>(<span class="hljs-built_in">keys</span>)
+    <span class="hljs-keyword">print</span>(key_list)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'name'</span>, <span class="hljs-string">'age'</span>, <span class="hljs-string">'city'</span>]
+    </code></pre>
+    <p><strong><code>.values()</code> Method</strong>:</p>
+    <ul>
+        <li>Returns a view of all the values in the dictionary.</li>
+        <li>Similar to <code>.keys()</code>, the result is a view object that can be converted to other data types.</li>
+    </ul>
+    <pre><code class="lang-python">person = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: <span class="hljs-number">30</span>,
+        <span class="hljs-string">"city"</span>: <span class="hljs-string">"New York"</span>
+    }
+    
+    <span class="hljs-built_in">values</span> = person.<span class="hljs-built_in">values</span>()
+    <span class="hljs-keyword">print</span>(<span class="hljs-built_in">values</span>)  # Outpu<span class="hljs-variable">t:</span> dict_values([<span class="hljs-string">'Alice'</span>, <span class="hljs-number">30</span>, <span class="hljs-string">'New York'</span>])
+    
+    # Convert the <span class="hljs-keyword">view</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">a</span> <span class="hljs-keyword">list</span>
+    value_list = <span class="hljs-keyword">list</span>(<span class="hljs-built_in">values</span>)
+    <span class="hljs-keyword">print</span>(value_list)  # Outpu<span class="hljs-variable">t:</span> [<span class="hljs-string">'Alice'</span>, <span class="hljs-number">30</span>, <span class="hljs-string">'New York'</span>]
+    </code></pre>
+    <p><strong><code>.items()</code> Method</strong>:</p>
+    <ul>
+        <li>Returns a view of all the key-value pairs in the dictionary as tuples.</li>
+        <li>The result is a view object that can also be converted to other data types.</li>
+    </ul>
+    <pre><code class="lang-python">person = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: <span class="hljs-number">30</span>,
+        <span class="hljs-string">"city"</span>: <span class="hljs-string">"New York"</span>
+    }
+    
+    <span class="hljs-built_in">items</span> = person.<span class="hljs-built_in">items</span>()
+    <span class="hljs-keyword">print</span>(<span class="hljs-built_in">items</span>)  # Outpu<span class="hljs-variable">t:</span> dict_items([(<span class="hljs-string">'name'</span>, <span class="hljs-string">'Alice'</span>), (<span class="hljs-string">'age'</span>, <span class="hljs-number">30</span>), (<span class="hljs-string">'city'</span>, <span class="hljs-string">'New York'</span>)])
+    
+    # Convert the <span class="hljs-keyword">view</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">a</span> <span class="hljs-keyword">list</span> of tuples
+    item_list = <span class="hljs-keyword">list</span>(<span class="hljs-built_in">items</span>)
+    <span class="hljs-keyword">print</span>(item_list)  # Outpu<span class="hljs-variable">t:</span> [(<span class="hljs-string">'name'</span>, <span class="hljs-string">'Alice'</span>), (<span class="hljs-string">'age'</span>, <span class="hljs-number">30</span>), (<span class="hljs-string">'city'</span>, <span class="hljs-string">'New York'</span>)]
+    </code></pre>
+    <p><strong>Manipulating Dictionaries</strong>:
+        Dictionaries can be manipulated using various methods to add, update, and remove elements:</p>
+    <ul>
+        <li>Adding a new key-value pair:</li>
+    </ul>
+    <pre><code class="lang-python">person = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: <span class="hljs-number">30</span>
+    }
+    
+    person[<span class="hljs-string">"city"</span>] = <span class="hljs-string">"New York"</span>
+    <span class="hljs-keyword">print</span>(person)  # Outpu<span class="hljs-variable">t:</span> {<span class="hljs-string">'name'</span>: <span class="hljs-string">'Alice'</span>, <span class="hljs-string">'age'</span>: <span class="hljs-number">30</span>, <span class="hljs-string">'city'</span>: <span class="hljs-string">'New York'</span>}
+    </code></pre>
+    <ul>
+        <li>Updating a value:</li>
+    </ul>
+    <pre><code class="lang-python">person[<span class="hljs-string">"age"</span>] = <span class="hljs-number">31</span>
+    <span class="hljs-keyword">print</span>(person)  # Outpu<span class="hljs-variable">t:</span> {<span class="hljs-string">'name'</span>: <span class="hljs-string">'Alice'</span>, <span class="hljs-string">'age'</span>: <span class="hljs-number">31</span>, <span class="hljs-string">'city'</span>: <span class="hljs-string">'New York'</span>}
+    </code></pre>
+    <ul>
+        <li>Removing a key-value pair:</li>
+    </ul>
+    <pre><code class="lang-python">del person[<span class="hljs-string">"age"</span>]
+    <span class="hljs-keyword">print</span>(person)  # Outpu<span class="hljs-variable">t:</span> {<span class="hljs-string">'name'</span>: <span class="hljs-string">'Alice'</span>, <span class="hljs-string">'city'</span>: <span class="hljs-string">'New York'</span>}
+    </code></pre>
+    <ul>
+        <li>Using the <code>.pop()</code> method:</li>
+    </ul>
+    <pre><code class="lang-python">removed_age = person.<span class="hljs-keyword">pop</span>(<span class="hljs-string">"age"</span>)
+    <span class="hljs-keyword">print</span>(removed_age)  # Outpu<span class="hljs-variable">t:</span> <span class="hljs-number">31</span>
+    <span class="hljs-keyword">print</span>(person)  # Outpu<span class="hljs-variable">t:</span> {<span class="hljs-string">'name'</span>: <span class="hljs-string">'Alice'</span>, <span class="hljs-string">'city'</span>: <span class="hljs-string">'New York'</span>}
+    </code></pre>
+    <p>These methods and techniques allow you to manipulate and work with dictionaries effectively, making them a
+        versatile tool for storing and organizing data.</p>
+    <ul>
+        <li>Dictionary usage with examples.</li>
+    </ul>
+    <p>Examples illustrating the usage of dictionaries without loops:</p>
+    <p><strong>Example 1: Storing Personal Information</strong></p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Storing personal information using a dictionary</span>
+    person = {
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Alice"</span>,
+        <span class="hljs-string">"age"</span>: 30,
+        <span class="hljs-string">"city"</span>: <span class="hljs-string">"New York"</span>
+    }
+    
+    <span class="hljs-comment"># Accessing values using keys</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Name:"</span>, person[<span class="hljs-string">"name"</span>])
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Age:"</span>, person[<span class="hljs-string">"age"</span>])
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"City:"</span>, person[<span class="hljs-string">"city"</span>])
+    </code></pre>
+    <p><strong>Example 2: Mapping Relationships</strong></p>
+    <pre><code class="lang-python"># Mapping relationships <span class="hljs-keyword">using</span> dictionaries
+    contacts = {
+        <span class="hljs-string">"Alice"</span>: <span class="hljs-string">"555-1234"</span>,
+        <span class="hljs-string">"Bob"</span>: <span class="hljs-string">"555-5678"</span>,
+        <span class="hljs-string">"Charlie"</span>: <span class="hljs-string">"555-7890"</span>
+    }
+    
+    # Accessing phone numbers <span class="hljs-keyword">using</span> names
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Alice's phone number:"</span>, contacts[<span class="hljs-string">"Alice"</span>])
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Charlie's phone number:"</span>, contacts[<span class="hljs-string">"Charlie"</span>])
+    </code></pre>
+    <p><strong>Example 3: Managing Configuration Settings</strong></p>
+    <pre><code class="lang-python"># Managing configuration settings <span class="hljs-keyword">using</span> dictionaries
+    <span class="hljs-built_in">config</span> = {
+        <span class="hljs-string">"debug_mode"</span>: True,
+        <span class="hljs-string">"log_level"</span>: <span class="hljs-string">"high"</span>,
+        <span class="hljs-string">"max_connections"</span>: <span class="hljs-number">10</span>
+    }
+    
+    # Modifying configuration settings
+    <span class="hljs-built_in">config</span>[<span class="hljs-string">"log_level"</span>] = <span class="hljs-string">"medium"</span>
+    <span class="hljs-built_in">config</span>[<span class="hljs-string">"max_connections"</span>] = <span class="hljs-number">20</span>
+    
+    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">config</span>)
+    </code></pre>
+    <p><strong>Example 4: Nested Dictionaries</strong></p>
+    <pre><code class="lang-python"><span class="hljs-section"># Using nested dictionaries to store more complex data</span>
+    students = {
+    <span class="hljs-code">    "Alice": {"age": 20, "grade": "A"},</span>
+    <span class="hljs-code">    "Bob": {"age": 22, "grade": "B"},</span>
+    <span class="hljs-code">    "Charlie": {"age": 21, "grade": "A"}</span>
+    }
+    
+    <span class="hljs-section"># Accessing nested dictionary values</span>
+    print("Alice's age:", students[<span class="hljs-string">"Alice"</span>][<span class="hljs-symbol">"age"</span>])
+    print("Charlie's grade:", students[<span class="hljs-string">"Charlie"</span>][<span class="hljs-symbol">"grade"</span>])
+    </code></pre>
+    <p>These examples showcase the versatility of dictionaries in different contexts. Dictionaries are valuable tools
+        for managing data, mapping relationships, and organizing information in a structured and efficient manner.</p>
+    <h1 id="summary">Summary</h1>
+    <ol>
+        <li>
+            <p><strong>Data Types</strong>:</p>
+            <ul>
+                <li>Integers (<code>int</code>): Whole numbers used for counting and arithmetic.</li>
+                <li>Floats (<code>float</code>): Decimal numbers used for precise calculations.</li>
+                <li>Strings (<code>str</code>): Sequences of characters used for text.</li>
+                <li>Booleans (<code>bool</code>): Logical values <code>True</code> and <code>False</code> for
+                    conditions.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Basic Operations</strong>:</p>
+            <ul>
+                <li>Arithmetic: Addition (<code>+</code>), subtraction (<code>-</code>), multiplication
+                    (<code>*</code>), division (<code>/</code>).</li>
+                <li>Integer Division (<code>//</code>): Returns the quotient of division as an integer.</li>
+                <li>Modulus (<code>%</code>): Returns the remainder of division.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Strings</strong>:</p>
+            <ul>
+                <li>Sequences of characters used for text.</li>
+                <li>String methods: <code>.lower()</code>, <code>.upper()</code>, <code>.split()</code>,
+                    <code>.strip()</code>, etc.</li>
+                <li>String formatting: Using f-strings or <code>.format()</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Lists</strong>:</p>
+            <ul>
+                <li>Ordered, mutable collections of elements.</li>
+                <li>Creation, accessing elements using indices, modifying elements, adding/removing elements, list
+                    methods.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Tuples</strong>:</p>
+            <ul>
+                <li>Ordered, immutable collections of elements.</li>
+                <li>Creation, accessing elements using indices, use cases.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Dictionaries</strong>:</p>
+            <ul>
+                <li>Key-value pairs, efficient for mapping relationships and data retrieval.</li>
+                <li>Creation, accessing values using keys, dictionary methods, manipulation.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Comparison and Logical Operators</strong>:</p>
+            <ul>
+                <li>Comparison: <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>,
+                    <code>&gt;=</code>, <code>&lt;=</code>.</li>
+                <li>Logical: <code>and</code>, <code>or</code>, <code>not</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Functions</strong>:</p>
+            <ul>
+                <li>Blocks of code with a name, used for reusability.</li>
+                <li>Parameters, return values, function definition, calling functions.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Immutability and Mutability</strong>:</p>
+            <ul>
+                <li>Immutability: Cannot be changed after creation (e.g., tuples, strings).</li>
+                <li>Mutability: Can be changed after creation (e.g., lists).</li>
+            </ul>
+        </li>
+    </ol>
+    <p>These topics cover the fundamental aspects of data types, operations, strings, collections, comparisons,
+        functions, and mutability in programming.</p>
+    <h1 id="excercises">Excercises</h1>
+    <p> Beginner-friendly exercises related to data types in Python for students who have knowledge of variables:</p>
+    <p><strong>Exercise 1: Arithmetic Practice</strong>
+        Write a program that prompts the user to enter two numbers. Perform addition, subtraction, multiplication, and
+        division operations on these numbers and display the results.</p>
+    <p><strong>Exercise 2: String Manipulation</strong>
+        Create a program that takes a person&#39;s name as input and then outputs a greeting message like &quot;Hello,
+        [Name]!&quot; using string concatenation.</p>
+    <p><strong>Exercise 3: Temperature Conversion</strong>
+        Write a program that converts a temperature in Fahrenheit to Celsius. Prompt the user for the temperature in
+        Fahrenheit, perform the conversion, and display the result.</p>
+    <p><strong>Exercise 4: List Operations</strong>
+        Create a list containing the names of your favorite fruits. Write code to add a new fruit to the list, remove a
+        fruit, and display the third fruit in the list.</p>
+    <p><strong>Exercise 5: Dictionary Practice</strong>
+        Define a dictionary with names of cities as keys and their corresponding population as values. Ask the user to
+        input a city name and then display its population. If the city is not found, display a message stating that the
+        city is not in the dictionary.</p>
+    <h2 id="solutions">Solutions</h2>
+    <p><strong>Exercise 1: Arithmetic Practice</strong></p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Get input from the user</span>
+    num1 = <span class="hljs-built_in">float</span>(input(<span class="hljs-string">"Enter the first number: "</span>))
+    num2 = <span class="hljs-built_in">float</span>(input(<span class="hljs-string">"Enter the second number: "</span>))
+    
+    <span class="hljs-comment"># Perform arithmetic operations</span>
+    addition = num1 + num2
+    subtraction = num1 - num2
+    multiplication = num1 * num2
+    division = num1 / num2
+    
+    <span class="hljs-comment"># Display the results</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Addition:"</span>, addition)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Subtraction:"</span>, subtraction)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Multiplication:"</span>, multiplication)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Division:"</span>, division)
+    </code></pre>
+    <p><strong>Exercise 2: String Manipulation</strong></p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Get user's name</span>
+    <span class="hljs-built_in">name</span> = input(<span class="hljs-string">"Enter your name: "</span>)
+    
+    <span class="hljs-comment"># Greeting message using string concatenation</span>
+    greeting = <span class="hljs-string">"Hello, "</span> + <span class="hljs-built_in">name</span> + <span class="hljs-string">"!"</span>
+    print(greeting)
+    </code></pre>
+    <p><strong>Exercise 3: Temperature Conversion</strong></p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Get temperature in Fahrenheit from the user</span>
+    fahrenheit = <span class="hljs-built_in">float</span>(input(<span class="hljs-string">"Enter temperature in Fahrenheit: "</span>))
+    
+    <span class="hljs-comment"># Convert to Celsius</span>
+    celsius = (fahrenheit - 32) * 5 / 9
+    
+    <span class="hljs-comment"># Display the result</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature in Celsius:"</span>, celsius)
+    </code></pre>
+    <p><strong>Exercise 4: List Operations</strong></p>
+    <pre><code class="lang-python"><span class="hljs-comment"># Create a list of favorite fruits</span>
+    <span class="hljs-attr">favorite_fruits</span> = [<span class="hljs-string">"apple"</span>, <span class="hljs-string">"banana"</span>, <span class="hljs-string">"orange"</span>]
+    
+    <span class="hljs-comment"># Add a new fruit</span>
+    <span class="hljs-attr">new_fruit</span> = input(<span class="hljs-string">"Enter a new fruit: "</span>)
+    favorite_fruits.append(new_fruit)
+    
+    <span class="hljs-comment"># Remove a fruit</span>
+    <span class="hljs-attr">remove_fruit</span> = input(<span class="hljs-string">"Enter a fruit to remove: "</span>)
+    <span class="hljs-keyword">if</span> remove_fruit <span class="hljs-keyword">in</span> favorite_fruits:
+        favorite_fruits.remove(remove_fruit)
+    
+    <span class="hljs-comment"># Display the third fruit</span>
+    <span class="hljs-keyword">if</span> len(favorite_fruits) &gt;= <span class="hljs-number">3</span>:
+        <span class="hljs-attr">third_fruit</span> = favorite_fruits[<span class="hljs-number">2</span>]
+        print(<span class="hljs-string">"Third fruit in the list:"</span>, third_fruit)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">"List does not have a third fruit."</span>)
+    </code></pre>
+    <p><strong>Exercise 5: Dictionary Practice</strong></p>
+    <pre><code class="lang-python"><span class="hljs-meta"># <span class="hljs-meta-keyword">Define</span> a dictionary of city populations</span>
+    city_populations = {
+        <span class="hljs-string">"New York"</span>: <span class="hljs-number">8550405</span>,
+        <span class="hljs-string">"Los Angeles"</span>: <span class="hljs-number">3977683</span>,
+        <span class="hljs-string">"Chicago"</span>: <span class="hljs-number">2720546</span>,
+        <span class="hljs-string">"Houston"</span>: <span class="hljs-number">2303482</span>,
+        <span class="hljs-string">"Phoenix"</span>: <span class="hljs-number">1608138</span>
+    }
+    
+    <span class="hljs-meta"># Get user input for city</span>
+    city = <span class="hljs-keyword">input</span>(<span class="hljs-string">"Enter a city name: "</span>)
+    
+    <span class="hljs-meta"># Display population <span class="hljs-meta-keyword">if</span> city is found</span>
+    <span class="hljs-keyword">if</span> city in city_populations:
+        population = city_populations[city]
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"Population of"</span>, city + <span class="hljs-string">":"</span>, population)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">print</span>(<span class="hljs-string">"City not found in the dictionary."</span>)
+    </code></pre>
+
+
+
+</body>
+
+</html>
